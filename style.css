@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #464655;  
+}
+
+ul {    
+    list-style-type: none;      
+}
+
+li{
+    float: left;
+    margin: 2px;
+}
+
+li:nth-child(2n){
+    width: 20px;
+    height: 120px;
+    background-color: black;
+}
+
+li:nth-child(2n-1){
+    width: 40px;
+    height: 200px;
+    background-color: white;
+}
