@@ -17,6 +17,8 @@ body {
 ul {
     list-style-type: none;
     display: flex;
+    cursor: pointer;
+    font-size: 0.85em;
 }
 
 li {    
@@ -26,6 +28,7 @@ li {
 ul.pretas {
     position: absolute;
     top: 36%;
+    left: 8%;
     z-index: 1;
 }
 
@@ -40,13 +43,19 @@ ul.pretas>li {
     width: 20px;
     height: 120px;
     background-color: black;
-    margin: 11px;
+    margin: 9px;
+}
+
+ul.pretas>li.espaco{
+    margin-right: 36.6px;
 }
 
 ul.brancas>li {
-    width: 40px;
+    width: 33px;
     height: 200px;
     background-color: white;
+    padding-top: 180px;
+    text-align: center;
 }
 
 ul.brancas>li:hover{
