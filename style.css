@@ -27,9 +27,7 @@ li {
 
 ul.pretas {
     position: absolute;
-    top: 36%;
-    left: 8%;
-    z-index: 1;
+    transform: translate(-3px ,-30px);
 }
 
 ul.brancas{
