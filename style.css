@@ -3,7 +3,7 @@
 * {
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box;
+    box-sizing: border-box;    
 }
 
 body {
@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #464655;
-    height: 100vh;
+    height: 100vh;    
 }
 
 ul {
@@ -62,4 +62,16 @@ ul.brancas>li:hover{
 
 ul.pretas>li:hover{
     box-shadow: 0px 0px 7px 1px black;
+}
+
+@media screen and (max-width:1290px) {
+    body{
+        scale: 0.6;
+    }
+}
+
+@media screen and (max-width:770px) {
+    body{
+        scale: 0.3;
+    }
 }
