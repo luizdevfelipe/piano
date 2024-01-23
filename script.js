@@ -3,9 +3,3 @@ function tocar(nota){
     audio = new Audio(`audios/${arquivo}`);
     audio.play();
 }
-
-function parar(){
-    audio.pause()
-}
-
-
