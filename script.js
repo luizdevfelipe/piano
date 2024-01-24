@@ -1,5 +1,4 @@
 function tocar(nota){
-    arquivo = nota + '.wav';
-    audio = new Audio(`audios/${arquivo}`);
+    audio = new Audio(`audios/${nota}.wav`);
     audio.play();
 }
