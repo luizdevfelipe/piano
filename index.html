@@ -10,74 +10,76 @@
 </head>
 
 <body>
+    <button onclick="tocar_musica()">Tocar Música</button>
     <!-- 61 teclas -->
     <!-- 36 brancas e 25 pretas-->
-    <ul class="brancas">
-        <li onmousedown="tocar('c2')">C2</li>
-        <li onmousedown="tocar('d2')">D2</li>
-        <li onmousedown="tocar('e2')">E2</li>
-        <li onmousedown="tocar('f2')">F2</li>
-        <li onmousedown="tocar('g2')">G2</li>
-        <li onmousedown="tocar('a2')">A2</li>
-        <li onmousedown="tocar('b2')">B2</li>
-        <li onmousedown="tocar('c3')">C3</li>
-        <li onmousedown="tocar('d3')">D3</li>
-        <li onmousedown="tocar('e3')">E3</li>
-        <li onmousedown="tocar('f3')">F3</li>
-        <li onmousedown="tocar('g3')">G3</li>
-        <li onmousedown="tocar('a3')">A3</li>
-        <li onmousedown="tocar('b3')">B3</li>
-        <li onmousedown="tocar('c4')">C4</li>
-        <li onmousedown="tocar('d4')">D4</li>
-        <li onmousedown="tocar('e4')">E4</li>
-        <li onmousedown="tocar('f4')">F4</li>
-        <li onmousedown="tocar('g4')">G4</li>
-        <li onmousedown="tocar('a4')">A4</li>
-        <li onmousedown="tocar('b4')">B4</li>
-        <li onmousedown="tocar('c5')">C5</li>
-        <li onmousedown="tocar('d5')">D5</li>
-        <li onmousedown="tocar('e5')">E5</li>
-        <li onmousedown="tocar('f5')">F5</li>
-        <li onmousedown="tocar('g5')">G5</li>
-        <li onmousedown="tocar('a5')">A5</li>
-        <li onmousedown="tocar('b5')">B5</li>
-        <li onmousedown="tocar('c6')">C6</li>
-        <li onmousedown="tocar('d6')">D6</li>
-        <li onmousedown="tocar('e6')">E6</li>
-        <li onmousedown="tocar('f6')">F6</li>
-        <li onmousedown="tocar('g6')">G6</li>
-        <li onmousedown="tocar('a6')">A6</li>
-        <li onmousedown="tocar('b6')">B6</li>
-        <li onmousedown="tocar('c7')">C7</li>
-    </ul>
-
-    <ul class="pretas">
-        <li onmousedown="tocar('c2p')"></li>
-        <li onmousedown="tocar('d2p')" class="espaco"></li>
-        <li onmousedown="tocar('f2p')"></li>
-        <li onmousedown="tocar('g2p')"></li>
-        <li onmousedown="tocar('a2p')" class="espaco"></li>
-        <li onmousedown="tocar('c3p')"></li>
-        <li onmousedown="tocar('d3p')" class="espaco"></li>
-        <li onmousedown="tocar('f3p')"></li>
-        <li onmousedown="tocar('g3p')"></li>
-        <li onmousedown="tocar('a3p')" class="espaco"></li>
-        <li onmousedown="tocar('c4p')"></li>
-        <li onmousedown="tocar('d4p')" class="espaco"></li>
-        <li onmousedown="tocar('f4p')"></li>
-        <li onmousedown="tocar('g4p')"></li>
-        <li onmousedown="tocar('a4p')" class="espaco"></li>
-        <li onmousedown="tocar('c5p')"></li>
-        <li onmousedown="tocar('d5p')" class="espaco"></li>
-        <li onmousedown="tocar('f5p')"></li>
-        <li onmousedown="tocar('g5p')"></li>
-        <li onmousedown="tocar('a5p')" class="espaco"></li>
-        <li onmousedown="tocar('c6p')"></li>
-        <li onmousedown="tocar('d6p')" class="espaco"></li>
-        <li onmousedown="tocar('f6p')"></li>
-        <li onmousedown="tocar('g6p')"></li>
-        <li onmousedown="tocar('a6p')" class="espaco"></li>
-    </ul>
+    <div class="container">
+        <ul class="brancas">
+            <li data-nota='c2'>C2</li>
+            <li data-nota='d2'>D2</li>
+            <li data-nota='e2'>E2</li>
+            <li data-nota='f2'>F2</li>
+            <li data-nota='g2'>G2</li>
+            <li data-nota='a2'>A2</li>
+            <li data-nota='b2'>B2</li>
+            <li data-nota='c3'>C3</li>
+            <li data-nota='d3'>D3</li>
+            <li data-nota='e3'>E3</li>
+            <li data-nota='f3'>F3</li>
+            <li data-nota='g3'>G3</li>
+            <li data-nota='a3'>A3</li>
+            <li data-nota='b3'>B3</li>
+            <li data-nota='c4'>C4</li>
+            <li data-nota='d4'>D4</li>
+            <li data-nota='e4'>E4</li>
+            <li data-nota='f4'>F4</li>
+            <li data-nota='g4'>G4</li>
+            <li data-nota='a4'>A4</li>
+            <li data-nota='b4'>B4</li>
+            <li data-nota='c5'>C5</li>
+            <li data-nota='d5'>D5</li>
+            <li data-nota='e5'>E5</li>
+            <li data-nota='f5'>F5</li>
+            <li data-nota='g5'>G5</li>
+            <li data-nota='a5'>A5</li>
+            <li data-nota='b5'>B5</li>
+            <li data-nota='c6'>C6</li>
+            <li data-nota='d6'>D6</li>
+            <li data-nota='e6'>E6</li>
+            <li data-nota='f6'>F6</li>
+            <li data-nota='g6'>G6</li>
+            <li data-nota='a6'>A6</li>
+            <li data-nota='b6'>B6</li>
+            <li data-nota='c7'>C7</li>
+        </ul>
+        <ul class="pretas">
+            <li data-nota='c2p'></li>
+            <li data-nota='d2p' class="espaco"></li>
+            <li data-nota='f2p'></li>
+            <li data-nota='g2p'></li>
+            <li data-nota='a2p' class="espaco"></li>
+            <li data-nota='c3p'></li>
+            <li data-nota='d3p' class="espaco"></li>
+            <li data-nota='f3p'></li>
+            <li data-nota='g3p'></li>
+            <li data-nota='a3p' class="espaco"></li>
+            <li data-nota='c4p'></li>
+            <li data-nota='d4p' class="espaco"></li>
+            <li data-nota='f4p'></li>
+            <li data-nota='g4p'></li>
+            <li data-nota='a4p' class="espaco"></li>
+            <li data-nota='c5p'></li>
+            <li data-nota='d5p' class="espaco"></li>
+            <li data-nota='f5p'></li>
+            <li data-nota='g5p'></li>
+            <li data-nota='a5p' class="espaco"></li>
+            <li data-nota='c6p'></li>
+            <li data-nota='d6p' class="espaco"></li>
+            <li data-nota='f6p'></li>
+            <li data-nota='g6p'></li>
+            <li data-nota='a6p' class="espaco"></li>
+        </ul>
+    </div>
 
     <script src="script.js"></script>
 </body>
