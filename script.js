@@ -4,16 +4,7 @@ const fur_elise = [
     'e5', 'd5p', 'e5', 'd5p', 'e5', 'b4', 'd5', 'c5',
     'a4', 'c4', 'e4', 'a4', 'b4', 'e4', 'g4p', 'b4', 'c5', 'e4',
     'e5', 'd5p', 'e5', 'd5p', 'e5', 'b4', 'd5', 'c5',
-    'a4', 'c4', 'e4', 'a4', 'b4', 'e4', 'g4p', 'b4', 'c5', 'e4'
-]
-
-const times = [
-    400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400,
-    400, 400, 400, 400, 400, 400, 400, 400, 400,
-    400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400,
-    400, 400, 400, 400, 400, 400, 400, 400, 400,
-    400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400,
-    400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400,
+    'a4', 'c4', 'e4', 'a4', 'b4', 'e4', 'g4p', 'b4', 'c5'
 ]
 
 function tocar(nota) {
@@ -34,7 +25,7 @@ async function tocar_musica() {
 
         tocar(fur_elise[i]);
 
-        await new Promise(resolve => setTimeout(resolve, times[i]));
+        await new Promise(resolve => setTimeout(resolve, 400));
 
         background !== null ? tecla.style.background = '' : tecla.style.boxShadow = '';
     }
