@@ -5,6 +5,9 @@
     "author": "Luiz Felipe (https://github.com/luizdevfelipe)",
     "license": "MIT",
     "main": "app.js",
+    "scripts": {
+       "start": "node --env-file .env app.js"
+    },
     "keywords": [
         "nodejs",
         "bootstrap",

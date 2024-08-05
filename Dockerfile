@@ -15,3 +15,6 @@ COPY --chown=node:node . .
 EXPOSE 8002
 
 CMD [ "node", "app.js" ]
+
+
+# para funcionar basta ter um npm install e um npm start
