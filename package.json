@@ -1,0 +1,22 @@
+{
+    "name": "piano-ia",
+    "version": "1.0.0",
+    "description": "A piano app that works with Gemini",
+    "author": "Luiz Felipe (https://github.com/luizdevfelipe)",
+    "license": "MIT",
+    "main": "app.js",
+    "keywords": [
+        "nodejs",
+        "bootstrap",
+        "express",
+        "Gemini"
+    ],
+    "dependencies": {
+        "@google/generative-ai": "^0.16.0",
+        "express": "^4.16.4"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/luizdevfelipe/piano.git"
+    }
+}
