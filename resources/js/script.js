@@ -1,37 +1,5 @@
-var fur_elise = [
-    'e5', 'd5p', 'e5', 'd5p', 'e5', 'b4', 'd5', 'c5',
-    'a4', 'c4', 'e4', 'a4', 'b4', 'e4', 'g4p', 'b4', 'c5', 'e4',
-    'e5', 'd5p', 'e5', 'd5p', 'e5', 'b4', 'd5', 'c5',
-    'a4', 'c4', 'e4', 'a4', 'b4', 'e4', 'g4p', 'b4', 'c5', 'e4',
-    'e5', 'd5p', 'e5', 'd5p', 'e5', 'b4', 'd5', 'c5',
-    'a4', 'c4', 'e4', 'a4', 'b4', 'e4', 'g4p', 'b4', 'c5'
-]
-
-const times = [
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-    250, 250, 250, 250,
-]
+const notas = [ 'e5', 'd5p', 'e5', 'd5p', 'e5', 'b4', 'd5', 'c5', 'a4', 'c4', 'e4', 'a4', 'b4', 'e4', 'g4p', 'b4', 'c5', 'e4', 'e5', 'd5p', 'e5', 'd5p', 'e5', 'b4', 'd5', 'c5', 'a4', 'c4', 'e4', 'a4', 'b4', 'e4', 'g4p', 'b4', 'c5', 'e4', 'e5', 'd5p', 'e5', 'd5p', 'e5', 'b4', 'd5', 'c5', 'a4', 'c4', 'e4', 'a4', 'b4', 'e4', 'g4p', 'b4', 'c5' ]
+const tempos = [ 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250 ]
 
 function tocar(nota) {
     audio = new Audio(`audios/${nota}.wav`);
@@ -40,8 +8,8 @@ function tocar(nota) {
 
 async function tocar_musica() {
 
-    for (let i = 0; i < fur_elise.length; i++) {
-        const tecla = document.querySelector(`[data-nota=${fur_elise[i]}]`)
+    for (let i = 0; i < notas.length; i++) {
+        const tecla = document.querySelector(`[data-nota=${notas[i]}]`)
         const classes = tecla.parentNode.classList;
         var background = null;
 
@@ -49,9 +17,9 @@ async function tocar_musica() {
 
         if (background !== null) { tecla.style.background = background; }
 
-        tocar(fur_elise[i]);
+        tocar(notas[i]);
 
-        await new Promise(resolve => setTimeout(resolve, times[i]));
+        await new Promise(resolve => setTimeout(resolve, tempos[i]));
 
         background !== null ? tecla.style.background = '' : tecla.style.boxShadow = '';
     }

@@ -1,5 +1,5 @@
+const { run } = require('./app/gemini.js');
 const express = require('express');
-// importar arquivo gemini.js para que a função run() seja executada
 
 // definição da aplicação
 const app = express();
@@ -8,7 +8,7 @@ const router = express.Router();
 // definição de constantes 
 const resources_path = __dirname + '/resources/';
 const views_path = __dirname + '/resources/views';
-const port = 8002;
+const port = process.env.APP_PORT;
 
 // definição de rotas
 router.get('/', function (req, res) {
