@@ -1,5 +1,4 @@
-const notas = [ 'e5', 'd5p', 'e5', 'd5p', 'e5', 'b4', 'd5', 'c5', 'a4', 'c4', 'e4', 'a4', 'b4', 'e4', 'g4p', 'b4', 'c5', 'e4', 'e5', 'd5p', 'e5', 'd5p', 'e5', 'b4', 'd5', 'c5', 'a4', 'c4', 'e4', 'a4', 'b4', 'e4', 'g4p', 'b4', 'c5', 'e4', 'e5', 'd5p', 'e5', 'd5p', 'e5', 'b4', 'd5', 'c5', 'a4', 'c4', 'e4', 'a4', 'b4', 'e4', 'g4p', 'b4', 'c5' ]
-const tempos = [ 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250, 250 ]
+const notas = ['c4']
 
 function tocar(nota) {
     audio = new Audio(`audios/${nota}.wav`);
@@ -19,7 +18,7 @@ async function tocar_musica() {
 
         tocar(notas[i]);
 
-        await new Promise(resolve => setTimeout(resolve, tempos[i]));
+        await new Promise(resolve => setTimeout(resolve, 330));
 
         background !== null ? tecla.style.background = '' : tecla.style.boxShadow = '';
     }
@@ -33,6 +32,20 @@ window.addEventListener('DOMContentLoaded', function () {
 
     document.querySelector('ul.brancas').addEventListener('click', function (event) {
         if (nota = event.target.closest('li').getAttribute('data-nota')) tocar(nota)
+    })
+
+    document.querySelector('.submit-prompt').addEventListener('click', function (event) {
+        const prompt = document.querySelector('.text-prompt').value
+
+        fetch(`/${prompt}`, { 'method': 'POST' })
+        .then(function (response) {
+            if (response.ok) {
+                return response.json()
+            }
+        })
+        .then(function (data) {
+            console.log(data.song)
+        })
     })
 
 })

@@ -15,8 +15,29 @@ body {
     align-items: center;
 }
 
-button {
-    justify-self: start;
+.form {
+    background-color: #2b2b50;
+    margin: 20px;
+    padding: 5px;
+    height: 70px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 3px 1px #161629;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.prompt {
+    height: 55px;
+    font-size: 1.1em;
+    margin: 1px;
+}
+
+.submit-prompt:hover {
+    border: 2px solid #21213d;
+    transition: all .1s;
+    background-color: #2b2b50;
+    color: white;
 }
 
 div.container {

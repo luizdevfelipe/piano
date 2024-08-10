@@ -15,9 +15,9 @@ router.get('/', function (req, res) {
   res.sendFile(views_path + '/index.html');
 });
 
-router.post('/', function (req, res) {
-  res.sendFile(views_path + '/index.html');
-  run();
+router.post('/:prompt', async function (req, res) {
+  const musica = await run(req.params.prompt);
+  res.status(200).json({ song: musica })
 });
 
 // inicialização da aplicação
