@@ -16,8 +16,12 @@ router.get('/', function (req, res) {
 });
 
 router.post('/:prompt', async function (req, res) {
-  const musica = await run(req.params.prompt);
-  res.status(200).json({ song: musica })
+  try {
+    const musica = await run(req.params.prompt);
+    res.status(200).json({ song: musica })
+  } catch (err) {
+    res.status(500);
+  } 
 });
 
 // inicialização da aplicação
