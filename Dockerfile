@@ -12,5 +12,3 @@ COPY . .
 CMD ["npm", "start"]
 
 EXPOSE 8002
-
-# docker run -p 8002:8002 -v ${PWD}:/app -v /app/node_modules nome-da-imagem
