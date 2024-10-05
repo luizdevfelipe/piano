@@ -40,7 +40,7 @@ docker build -t piano .
 <p><strong>5º</strong> Com tudo já definido o último passo é criar o container da aplicação através da imagem que já foi estabelecida. Novamente, basta digitar o seguinte comando em um terminal que esteja rodando no diretório da aplicação: </p>
 
 ```cmd
-docker run -p 8002:8002 piano
+docker run --name piano -p 8002:8002 piano
 ```
 
 <p><strong>8º</strong> Tudo Certo! Basta acessar <strong>http://localhost:8002/</strong> para que você possa visualizar o projeto em funcionamento!</p>
